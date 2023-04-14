@@ -1,0 +1,27 @@
+    <svg viewBox="0 0 274 264" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <style>
+            .LC_stroke_1{stroke: #222;}
+            .LC_stroke_2{stroke: #333;}
+            .LC_stroke_3{stroke: #666;}
+            .LC_fill_1{fill: #222;}
+            .LC_fill_2{fill: #666;}
+            path{stroke-linecap: round; stroke-width: 40;}
+        </style>
+
+        <circle cx="120.002" cy="120" r="110" class="LC_stroke_3" stroke-width="20"/>
+        <rect x="116.001" y="31" width="10" height="10" class="LC_fill_2"/>
+        <rect width="6" height="8" transform="matrix(0.866025 -0.5 0.500001 0.866025 75.502 45.2581)" class="LC_fill_2"/>
+        <rect width="6" height="8" transform="matrix(0.5 -0.866025 0.866026 0.499999 44.2603 77.4998)" class="LC_fill_2"/>
+        <rect x="41.002" y="116" width="10" height="10" transform="rotate(90 41.002 116)" class="LC_fill_2"/>
+        <rect width="6" height="8" transform="matrix(0.5 0.866025 -0.866025 0.500001 48.3848 160)" class="LC_fill_2"/>
+        <rect width="6" height="8" transform="matrix(0.866025 0.5 -0.499999 0.866026 78.0015 190.616)" class="LC_fill_2"/>
+        <rect x="116.001" y="199" width="10" height="10" class="LC_fill_2"/> 
+        <rect width="6" height="8" transform="matrix(0.866025 -0.5 0.500001 0.866025 160.002 191.616)" class="LC_fill_2"/>
+        <rect width="6" height="8" transform="matrix(0.5 -0.866025 0.866026 0.499999 190.619 162)" class="LC_fill_2"/>
+        <rect x="209.002" y="116" width="10" height="10" transform="rotate(90 209.002 116)" class="LC_fill_2"/>
+        <rect width="6" height="8" transform="matrix(0.5 0.866025 -0.866025 0.500001 194.743 75.4998)" class="LC_fill_2"/>
+        <rect width="6" height="8" transform="matrix(0.866025 0.5 -0.499999 0.866026 162.501 44.2581)" class="LC_fill_2"/>
+        <path d="M120.326 76.0405L74.5015 145.934C71.7918 147.221 35.0158 222.969 26.0014 243.311" class="LC_stroke_1"/>
+        <path d="M119.26 67.5386L138.692 149.811C141.803 167.229 152.346 177.923 166.206 176.721C184.857 175.104 253.074 131.482 253.074 131.482" class="LC_stroke_2"/>
+    </svg>

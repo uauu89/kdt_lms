@@ -1,0 +1,115 @@
+/* admin_lecture_list */
+
+.smallBtn{
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 28px;
+  background-color: var(--color_white);
+  color: var(--color_main);
+  border-color: var(--color_main);
+}
+
+.smallBtn:hover{
+  color: var(--color_white);
+  background-color: var(--color_main);
+}
+
+.table{
+  width: 100%;
+  line-height: 20px;
+  background-color: var(--color_white);
+  text-align: center;
+  border-radius: 10px;
+}
+
+tr{
+  height: 50px;
+  position: relative;
+}
+
+th, td{
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+thead > tr > th:first-of-type{
+  position: relative;
+}
+thead > tr > th:first-of-type > label{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#check_all{
+  position: relative;
+  z-index: 1;
+}
+.td_checkbox label{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.td_checkbox input{
+  position: relative;
+  z-index: 1;
+}
+.td_Zindex a,
+.td_Zindex button{
+  position: relative;
+  z-index: 2;
+}
+
+.td_Zindex a:hover{
+  text-decoration: underline;
+}
+
+
+.pagination a{
+  font-size: 16px;
+  color: var(--color_main);
+}
+/* /admin_lecture_list */
+
+
+/* admin_lecture_detail */
+.wrap_left{
+  width: 384px;
+}
+.form-check input{
+  opacity: 1 !important;
+}
+.form-check input:checked + label{
+  opacity: 1 !important;
+}
+
+.ratio-16x9{
+  min-width: 160px;
+  max-width: 640px;
+}
+
+.btn{
+  white-space: nowrap;
+  position: relative;
+}
+
+/* /admin_lecture_detail */
+
+img.thumbnail{
+  width: 100%;
+  height: 100%;
+}
+/* /admin_lecture_reg */
+
+
+
