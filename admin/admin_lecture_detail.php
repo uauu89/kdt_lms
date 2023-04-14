@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/head.php";
+    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/c_head.php";
     include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/admin_session.php";
 
     $pageId = $_GET["page"];
@@ -13,13 +13,13 @@
     $i = $result->fetch_object();
     
 ?>
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/admin_lecture.css">
+    <link rel="stylesheet" href="/kdt_lms/css/admin_common.css">
+    <link rel="stylesheet" href="/kdt_lms/css/admin_lecture.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script src="../js/admin_lecture.js"></script>
+    <script src="/kdt_lms/js/admin_lecture.js"></script>
     <title>관리_상세보기 - NOW</title>
 </head>
-<?php include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/admin_header.php"; ?>
     <main class="flex-grow-1">
         <h2 class="f_mainTitle m-5">강의 상세보기</h2>
         <div class="d-flex justify-content-end gap-3">

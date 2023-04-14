@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/dbcon.php";
+    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/c_dbcon.php";
     include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/admin_session.php";
 
     $selected = $_POST['selected'];

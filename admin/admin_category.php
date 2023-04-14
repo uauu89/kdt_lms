@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/dbcon.php";
+    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/c_dbcon.php";
     $catePkey = $_POST['prival'];
     $cateC = "SELECT * from lms_cate_secondary where cate_prim_link=".$catePkey;
     $reC = $mysqli -> query($cateC) or die("query error=>".$mysqli->error);

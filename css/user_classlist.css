@@ -1,0 +1,202 @@
+/* style */
+.cateGroup{
+    gap: 30px;
+}
+
+.selectBoxWrap{
+    position: relative;
+    /* flex-grow: 0; */
+    /* display: inline-block; */
+}
+.style_selectBox{
+    padding: 0 20px;
+    line-height: 40px;
+    background-color: var(--color_grey1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    cursor: pointer;
+}
+
+.style_selectBox.click{
+    /* border-color: var(--color_accent); */
+    color: var(--color_main);
+    background-color: var(--color_white);
+    font-weight: 700;
+}
+
+.style_selectBox.click  i::before{content: "\f077";}
+
+
+.selectOption{
+    /* padding: 5px 15px; */
+    /* background-color: var(--color_main); */
+    background-color: #111;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    overflow: hidden;
+    
+}
+
+.style_selectBox.click + .selectOption{
+    display: block;
+}
+
+.selectOption li:hover{
+    background-color: var(--color_grey2);
+}
+
+.selectOption input{
+    display: none;
+}
+.selectOption label{
+    display: block;
+    padding: 12px;
+    margin: 0 10px;
+    position: relative;
+    color: var(--color_grey3);
+    border-bottom: 1px solid var(--color_grey2);
+    cursor: pointer;
+}
+.selectOption li:last-of-type label{
+    border: none;
+}
+
+input:checked + label{
+    font-weight: 700;
+    color: var(--color_white);
+}
+
+
+/* classList */
+
+.section_classlist{
+    padding-top: 50px;
+}
+.section_classlist header{
+    
+    border-bottom: 1px solid var(--color_grey1);
+    padding-bottom: 30px;
+    gap: 100px;
+    margin-bottom: 30px;
+}
+
+
+
+.optionList{
+    gap: 10px;
+    flex: 1;
+}
+
+.optionList li input{
+    vertical-align: middle;
+}
+.optionList label{
+    line-height: 30px;
+    padding: 5px 20px 5px 10px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width:1300px){
+    .section_classlist header{
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .optionList{
+        justify-content: center;
+    }
+}
+@media (max-width:1140px){
+    .section_classlist header{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .optionList{
+        width: 100%;
+        justify-content: start;
+        /* order: 3; */
+        /* flex: 1; */
+    }
+}
+
+@media (max-width:700px) {
+    .cateGroup{
+        flex-direction: column;
+    }
+
+    .sortingWrap{
+        flex: 1;
+    }
+
+
+    .sorted_list{
+        flex-direction: column;
+    }
+    .sorted_list figure{
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--color_grey1);
+    }
+    
+}
+
+/* .selectBox_priCategory */
+
+/* <i class="fa-solid fa-arrow-up"></i> */
+/* f062 */
+/* <i class="fa-solid fa-arrow-down"></i> */
+/* f063 */
+
+
+
+
+.btn_adOrder{
+    line-height: 40px;
+    height: 40px;
+    background-color: var(--color_grey1);
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn_adOrder.asc i::before{
+    content: "\f062";
+}
+
+.sorted_list .moreWrap{
+    width: 100%;
+    text-align: center;
+}
+.sorted_list .more{
+    width: 100%;
+    max-width: 600px;
+    /* margin: 0 auto; */
+    border: none;
+    border-radius: 5px;
+    line-height: 40px;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    background-color: var(--color_mybtnbg);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px;
+    color: var(--color_grey3);
+    transition: 0.3s;
+}
+
+.sorted_list .more i{
+    margin-right: 10px;
+}
+.sorted_list .more:hover{
+    color: var(--color_white);
+    background-color: var(--color_grey1);
+}

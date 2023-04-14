@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/dbcon.php";
+    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/c_dbcon.php";
     include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/admin_session.php";
 
     $lect_key_array = explode(",",  $_POST["pageId"]);

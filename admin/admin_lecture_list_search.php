@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/head.php";
+    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/c_head.php";
     include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/admin_session.php";
 
     if(isset($_GET['page'])){
@@ -49,13 +49,13 @@
     while($i = $result->fetch_object()){$iarray[]=$i;}
 
 ?>
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/admin_lecture.css">
+    <link rel="stylesheet" href="/kdt_lms/css/admin_common.css">
+    <link rel="stylesheet" href="/kdt_lms/css/admin_lecture.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script src="../js/admin_lecture.js"></script>
+    <script src="/kdt_lms/js/admin_lecture.js"></script>
     <title>관리_강의목록 - NOW</title>
 </head>
-<?php include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/admin_header.php"; ?>
     <main class="flex-grow-1">
         <section>
             <h2 class="f_mainTitle m-5">강의 목록 - 검색 결과</h2>
@@ -79,7 +79,7 @@
                 </form>
                 <div class="d-flex justify-content-end gap-3">
                     <a href="admin_lecture_reg.php" class="btn btn-dark px-5">등록</a>
-                    <button type="button" class="btn btn-dark px-5 btn_lect_modify">수정</button>
+                    <button type="button" class="btn btn-dark px-5 btn_lect_modify">선택수정</button>
                     <button type="button" class="btn btn-dark px-5 btn_lect_delete">삭제</button>
                 </div>
             </div>

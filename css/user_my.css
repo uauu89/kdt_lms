@@ -1,0 +1,374 @@
+/* layout */
+
+main{
+    padding: 50px;
+}
+main .header{
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+main .header h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* side menu */
+
+
+aside{
+    bottom: 0;
+    color: var(--color_white);
+    font-weight: 700;
+    position: sticky;
+    width: 250px;
+    top: 147px;
+    height: 100%;
+    border-right: 1px solid var(--color_grey2);
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.myInfo{
+    padding: 40px 0 60px;
+    border-bottom: 1px solid var(--color_grey2);
+}
+aside .myInfo p{
+    font-size: 30px;
+    line-height: 43px;
+}
+aside nav ul{
+    margin: 70px 0;
+    gap: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+aside nav ul a{
+    display: block;
+    width: 180px;
+    line-height: 50px;
+    border-radius: 10px;
+    text-indent: 20px;
+}
+aside nav ul a.active{
+    background-color: var(--color_btnbg);
+    color: var(--color_main);
+}
+.btn_mAside{
+    position: absolute;
+    width: 40px;
+    right: 0;
+    border: none;
+    background: none;
+    color: var(--color_white);
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    display: none;
+}
+.btn_mAside::after{
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+
+@media (max-width: 1000px){
+
+    .btn_mAside{
+        display: block;
+    }
+    .mActive .btn_mAside::after{
+        content: "\f00d";
+    }
+    aside{
+        position: fixed;
+        background-color: #111;
+        
+        top: 137px;
+        left: 0;
+        width: 0;
+    }
+    aside .myInfo,
+    aside nav{
+        display: none;
+    }
+    aside.mActive{
+        width: 250px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+    }
+    aside.mActive .myInfo,
+    aside.mActive nav{
+        display: block;
+    }
+
+}
+
+@media (max-width: 700px){
+    aside{
+        top: 61px;
+    }
+}
+
+
+
+/* //side menu */
+
+
+
+
+/* item lecture profile */
+
+.list_lecture{
+    font-size: 16px;
+    color: var(--color_grey3);
+}
+.list_lecture .imgSection{
+    width: calc(16px * var(--imgSize_small));
+    height: calc(9px * var(--imgSize_small));
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.list_lecture img {
+    width: 100%;
+    object-fit: cover;
+}
+.list_lecture .tag{
+    /* display: none; */
+    padding-bottom: 5px;
+    /* border-bottom: 1px solid var(--color_grey2); */
+}
+.list_lecture .tag span{
+    padding: 2px 5px;
+    font-size: 14px;
+}
+
+.list_lecture h3,
+.list_lecture .price{
+    color: var(--color_white);
+    font-size: 20px;
+    z-index: 1;
+}
+
+
+
+@media (max-width: 1000px){
+    .list_lecture .imgSection{
+        width: 160px;
+        height: 90px;
+        border: 5px;
+    }
+}
+
+@media (max-width: 700px){
+    main{
+        padding-right: 0;
+    }
+    .list_lecture{
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .list_lecture .imgSection{
+        /* margin: 0 auto; */
+        display: none;
+    }
+
+}
+
+/* //item lecture profile */
+
+/* table */
+td{
+    vertical-align: top;
+}
+.td_button{
+    /* padding: 5px 10px; */
+    padding: auto 10px;
+    /* width: 100px; */
+    text-align: center;
+    /* position: relative; */
+    /* z-index: 1; */
+}
+
+.td_button .my_btn{
+    display: inline-block;
+    padding: 0 20px;
+    /* margin: 0 auto; */
+    line-height: 40px;
+    border: none;
+    background-color: var(--color_mybtnbg);
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+}
+th.td_button .my_btn{
+    position: absolute;
+    width: 120px;
+    right: 0;
+    bottom: 10px;
+}
+.td_button .my_btn:hover{
+    background-color: var(--color_btnbg);
+    color: var(--color_main);
+}
+
+th, td{
+    padding: 20px 0;
+    /* vertical-align: middle; */
+}
+
+tr{
+    border-bottom: 1px solid var(--color_grey1);
+    position: relative;
+}
+.td_checkbox{
+    padding: 20px 10px;
+}
+.td_checkbox .my_btn{
+    left: 0;
+    right: auto;
+    cursor: pointer;
+}
+
+td.td_button .my_btn{
+    white-space: nowrap;
+    margin-right: 10px;
+
+}
+
+.checkLabel{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    
+}
+
+tbody tr:hover{
+    background-color: var(--color_grey1);
+}
+
+@media (min-width: 701px){
+    td.td_button .my_btn i{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    main{
+        padding-right: 0;
+        padding-top: 0;
+    }
+    .list_lecture{
+        flex-direction: column;
+        font-size: 14px;
+        padding-left: 0 !important;
+    }
+    .list_lecture .imgSection{
+        margin: 0 auto;
+    }
+    th.td_button{
+        display: none;
+    }
+    .td_button .my_btn{
+        position: absolute;
+        right: 20px;
+        /* bottom: 20px; */
+    }
+    table .list_lecture{
+        flex-direction: row;
+    }
+
+    
+}
+
+/* //table */
+
+
+/* payment modal */
+.paymentWrap{
+    width: 280px;
+    position: relative;
+}
+
+.paymentWrap .buttons{
+    position: fixed;
+    width: 280px;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--color_grey1);
+}
+.paymentWrap .buttons .btn_payment{
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 20px;
+}
+.paymentWrap p{
+    display: flex;
+    justify-content: space-between;
+}
+.paymentWrap p span:first-of-type{
+    font-size: 16px;
+    line-height: 30px;
+}   
+.paymentWrap .input{
+    font-weight: 700;
+}
+
+@media (max-width:1200px) {
+    main .contents{
+        flex-direction: column;
+    }
+    .paymentWrap{
+        width: 100%;
+        position: relative;
+        padding: 0 20px;
+    }
+    .paymentWrap .buttons{
+        position: relative;
+        width: 100%;
+
+    }
+}
+/* //payment modal */
+
+
+.section_history{
+    padding-right: 0;
+}
+
+.section_history td{
+    vertical-align: middle;
+}
+
+.section_history td ul a{
+    color: var(--color_grey3);
+}
+.section_history td ul a:hover{
+    color: var(--color_white);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1200px) {
+    .section_history td:first-of-type{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        white-space: nowrap;
+    }
+    
+}

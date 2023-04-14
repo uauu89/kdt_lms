@@ -1,0 +1,267 @@
+/* reset */
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+h1, h2, h3, h4, h5, h6{
+  font-size: 100%;
+}
+
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: var(--color_grey4);
+  color: #222;
+  box-sizing: border-box;
+}
+
+
+
+
+/* /reset -- */
+/* component */
+
+
+
+
+/* header */
+
+header{
+  position: sticky;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 190px;
+  min-height: 100vh;
+  background-color: var(--color_main);
+  color: var(--color_white);
+  font-size: 20px;
+  line-height: 30px;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+header h1{
+  border-bottom: 1px solid var(--color_grey2);
+  margin-left: 10px;
+  padding: 30px 0;
+}
+
+.logo{
+  display: block;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+}
+h1 img{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+h1 span{
+  vertical-align: bottom;
+}
+
+nav{
+  position: relative;
+}
+nav > ul{
+  margin-top: 40px;
+  gap: 40px;
+  padding: 0;
+}
+nav > ul > li{
+  position: relative;
+}
+nav > ul > li > a{
+  padding-left: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+nav i::before{
+  line-height: 30px;
+}
+nav .icon{width: 30px;}
+nav span{
+  display: inline-block;
+  width: 100px;
+}
+
+nav > ul > li.active{
+  color: var(--color_main);
+  font-weight: bold;
+}
+nav > ul > li.active::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 22px;
+  top: -10px;
+  height: 50px;
+  background: var(--color_white);
+  z-index: -1;
+  border-radius: 0 10px 10px 0;
+}
+nav > ul > li.active .fa-angle-down::before{content: "\f106";}
+
+nav button{
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  color: var(--color_grey3);
+  background: none;
+  border: none;
+  font-size: 30px;
+}
+
+nav .submenu{
+  color: var(--color_grey3);
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0;
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 10px;
+  display: none;
+}
+
+nav .active .submenu{
+  display: flex;
+}
+nav .submenu a{
+  display: inline-block;
+  width: 120px;
+  text-indent: 30px;
+  /* text-align: center; */
+  border-left: 5px solid transparent;
+}
+
+
+nav .submenu a:hover{
+  color: var(--color_grey3);
+  border-left-color: var(--color_grey3);
+  /* font-weight: bold; */
+}
+nav .submenu a.active{
+  color: var(--color_white);
+  border-left-color: var(--color_white);
+  font-weight: bold;
+}
+
+.profile{
+  margin: 0 10px;
+  border-top: 1px solid var(--color_grey2);
+  padding: 30px 0 40px;
+
+}
+.profile .pimg{
+  background-color: #ABC6F0;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  text-align: center;
+}
+.profile .pimg i{
+  font-size: 40px;
+  color: #203960;
+  line-height: 70px;
+}
+.profile .ppos{
+  color: var(--color_grey3);
+  font-size: 16px;
+  line-height: 20px;
+}
+.logout{
+  display: inline-block;
+  margin-top: 20px;
+}
+.logout span{
+  margin-right: 30px;
+}
+
+/* header.mini */
+.mini{
+  width: auto;
+}
+.mini nav button i::before{content: "\f105";}
+
+.mini .m_hidden{
+  display: none;
+}
+
+.mini nav > ul > li.active::before{
+  right: 10px;
+}
+
+.mini .fa-angle-down::before{
+  content: "\f105";
+}
+.mini .active .fa-angle-down::before{
+  content: "\f105";
+}
+
+.mini nav > ul > li:hover .fa-angle-down::before{
+  content: "\f104";
+}
+
+.mini .profile .pimg{
+  width: 50px;
+  height: 50px;
+}
+.mini .profile .pimg i{
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.mini .submenu{
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin: 0;
+  padding: 20px 10px;
+  background-color: var(--color_white);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  gap: 20px;
+}
+.mini nav .active .submenu{
+  display: none;
+}
+
+.mini .submenu a.active{
+  color: var(--color_main);
+  font-weight: bold;
+  border-left-color: var(--color_main);
+}
+.mini nav > ul > li:hover .submenu{
+  display: flex;
+}
+
+
+.mini .profile section:hover .pinfo{
+  display: block;
+  position: absolute;
+  left: calc(100% + 10px);
+  background-color: var(--color_white);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+}
+
+.mini .profile .pname{
+  color: var(--color_main);
+  white-space: nowrap;
+}
+
+/* //header */
+
+main{
+  padding: 20px;
+}

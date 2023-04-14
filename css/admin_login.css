@@ -24,3 +24,9 @@ label{
     color: var(--color_main);
     font-weight: bold;
 }
+
+
+button.f_mainTitle{
+    font-size: 36px !important;
+    font-weight: bold !important;
+}

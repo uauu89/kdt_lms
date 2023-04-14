@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/dbcon.php";
+    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/c_dbcon.php";
     include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/admin_session.php";
 
     $lect_key_array = $_POST['lect_key'];
@@ -22,7 +22,7 @@
         $picName = $_SERVER['DOCUMENT_ROOT']."/kdt_lms/lectThumb/".$filename;
         
         unlink($picName);
-        $_SERVER['DOCUMENT_ROOT'].
+        // $_SERVER['DOCUMENT_ROOT'].
         $sql = "DELETE from lms_lecture where lect_key=".$lect_key;
         $result = $mysqli->query($sql) or die("query error=>".$mysqli_error);
 

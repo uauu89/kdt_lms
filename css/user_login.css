@@ -1,0 +1,351 @@
+/* text style */
+.inputTip{
+    font-size: 0.75em;
+    color: var(--color_grey3);
+}
+
+
+
+/* button style */
+
+
+.admin_link{
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+body{
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.btn_custom{
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 700;
+    background: var(--color_btnbg);
+    color: var(--color_main);
+}
+.btn_accent{
+    background-color: var(--color_accent);
+}
+.btn_medium{
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.btn_large{
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.btn_custom:hover{
+    background-color: var(--color_main);
+    color: var(--color_white);
+}
+.btn_custom.btn_accent:hover{
+    color: var(--color_accent);
+}
+/* //button style */
+
+
+
+/* form style */
+.formBg{
+    font-size: 16px;
+    background: var(--color_grey1);
+    padding: 60px 80px;
+    border-radius: 10px;
+    width: 500px;
+    box-sizing: content-box;
+    gap: 50px;
+    margin: 0 auto;
+    grid-row: 2;
+}
+.formBg header{
+    /* margin-bottom: 60px; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formBg header .logo{
+    font-size: 50px;
+}
+.formBg header .logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.formBg header h2{
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+.formBg header p{
+    font-size: 14px;
+    color: var(--color_grey3);
+    line-height: 23px;
+}
+
+.formBg label{
+    margin-bottom: 10px;
+    text-indent: 10px;
+}
+
+.form-control{
+    border-radius: 5px;
+    border: none;
+}
+.inputStyle{
+    line-height: 30px;
+    border: 3px solid var(--color_white);
+    padding: 3px 10px;
+}
+
+.formBg li a:hover{
+    text-decoration: underline;
+}
+
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+
+}
+
+
+
+.divisionLine::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 0.75em;
+    background: var(--color_white);
+    margin: 0 20px;
+}
+.idcheck{
+    background-color: var(--bs-dark);
+    color: var(--color_white);
+    line-height: 32px;
+    border-radius: 0 5px 5px 0 !important;
+}
+
+.idcheck:hover{
+    background-color: var(--color_main);
+    color: var(--color_accent);
+}
+
+@media (max-width: 700px) {
+    .formBg{
+        position: absolute;
+        width: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+    }
+}
+@media (max-width: 400px) {
+    ul{
+        font-size: 14px;
+    }
+    .divisionLine::after{
+        margin: 0 10px;
+    }
+}
+
+
+
+
+
+
+
+/* input validation style*/
+
+.customInputGroup{
+    width: 1%;
+    flex: 1 1 auto;
+}
+
+/* 
+.inputDone{
+    background-color: green;
+} */
+.inputDone + div{
+    position: relative;
+}
+.inputWrong{
+    border-color: var(--color_red);
+}
+
+.inputDone + div::before{
+    position: absolute;
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--color_green);
+    font-size: 20PX;
+    right: 10px;
+    bottom: 10px;
+}
+
+.inputWrong + div::before{
+    content: "\f06a";
+    color: var(--color_red);
+}
+
+.inputWrong + div::after{
+    position: absolute;
+    content: "";
+    font-size: 14px;
+    line-height: 30px;
+    color: var(--color_white);
+    padding: 0 10px;
+    border-radius: 5px;
+    
+    background-color: var(--color_red);
+    left: 1px;
+    top: 2px;
+}
+
+.inputWrong_empty + div::after{
+    content: "내용을 입력해주세요.";
+}
+.inputWrong_format + div::after{
+    content: "잘못된 형식입니다.";
+}
+.inputWrong_dup + div::after{
+    content: "아이디 중복검사를 해주세요.";
+}
+.inputWrong_exist + div::after{
+    content: "이미 존재하는 아이디입니다.";
+}
+.inputWrong_match + div::after{
+    content: "비밀번호가 일치하지 않습니다.";
+}
+
+
+
+/* findId_result style */
+.findId_result{
+    background-color: var(--color_btnbg);
+    color: var(--color_main);
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.noresult{
+    color: var(--color_grey2);
+}
+
+
+
+/* findPw modal style*/
+
+.overflow{
+    overflow: hidden;
+}
+
+.modal_findPw_wrap{
+    position: fixed;
+    display: grid;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    z-index: 9999;
+}
+/* .modal_findPw_wrap form{
+    flex-direction: column;
+} */
+.modal_findPw_wrap strong{
+    color: var(--color_main);
+    font-weight: 700;
+}
+
+.modal_findPw_wrap::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.modal_findPw{
+    min-width: 500px;
+    background-color: var(--color_white);
+    border-radius: 5px;
+    grid-row: 2;
+    grid-column: 2;
+    padding: 50px;
+    color: var(--color_grey2);
+}
+.modal_findPw h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color_main);
+}
+.modal_findPw input{
+    width: 100%;
+}
+
+
+
+.modal_findPw .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 0;
+}
+.modal_findPw .buttons .btn_payment{
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 20px 0;
+    max-width: 500px;
+    width: 100%;
+    font-size: 20px;
+}
+.buttons .btn_payment:hover{
+    background-color: var(--color_grey1);
+}
+.modal_findPw .buttons .cancel{
+    width: 100px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid var(--color_main);
+}
+
+.modal_findPw .buttons .cancel:hover{
+    background-color: var(--color_main);
+    color: var(--color_white);
+}
+
+
+@media (max-width: 700px){
+    .modal_findPw_wrap{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .modal_findPw{
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+}

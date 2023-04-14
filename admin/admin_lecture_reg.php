@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/head.php";
+    include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/c_head.php";
     include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/admin_session.php";
     
     $cateP = "SELECT * from lms_cate_primary";
@@ -8,15 +8,15 @@
 ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/admin_lecture.css">
+    <link rel="stylesheet" href="/kdt_lms/css/admin_common.css">
+    <link rel="stylesheet" href="/kdt_lms/css/admin_lecture.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.js" integrity="sha512-6F1RVfnxCprKJmfulcxxym1Dar5FsT/V2jiEUvABiaEiFWoQ8yHvqRM/Slf0qJKiwin6IDQucjXuolCfCKnaJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/admin_lecture.js"></script>
     <title>관리_강의등록 - NOW</title>
 </head>
-<?php include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/kdt_lms/inc/admin_header.php"; ?>
     <main class="flex-grow-1">
         <h2 class="f_mainTitle m-5">강의 등록하기</h2>
         <div class="d-flex justify-content-end gap-3">
@@ -135,7 +135,7 @@
                 </div>
                 <div class="d-flex justify-content-end gap-3">
                     <button type="submit" class="btn btn-dark px-5">등록</button>
-                    <button type="button" class="btn btn-dark px-5 btn_back">취소</button>
+                    <button type="button" class="btn btn-outline-dark px-5 btn_back">취소</button>
                 </div>
             </div>
         </form>
