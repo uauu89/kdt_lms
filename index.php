@@ -13,11 +13,11 @@
             본 사이트는 구직용 포트폴리오 사이트이며,<br>
             실제로 운영되는 사이트가 아닙니다.
         </h2>
+        <p>교육기간 : 22.10.27 ~ 23.04.19</p>
         <p>프로젝트 주요내용 : 프론트와 백엔드를 연동하여 페이지 구현</p>
         <div class="d-flex flex-column gap-3 ps-3">
             <h3>3차 프로젝트 : 관리자 페이지</h3>
-            <p>학습기간 : 22.10.27 ~ 23.04.19</p>
-            <p>제작기간 : 22.12.27 ~ 23.02.10</p>
+            <p>제작기간 : 23.03.06 ~ 23.03.16</p>
             <p>특징 : HTML, CSS, bootstrap, javascript, jQuery Library, php 활용</p>
             <p class="mt-3">기획서 : <a href="https://www.figma.com/file/e41JEuIWjZWFDiGrRzR208/KDT-3%EC%B0%A8-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-LMS-%EA%B4%80%EB%A6%AC%EC%9E%90-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%AC%ED%98%84?node-id=120%3A228&t=I6rMknSTCb1nyCzi-1" target="_blank">피그마 링크</a>
             <p>코드 : <a href="https://github.com/uauu89/kdt_lms" target="_blank">깃허브</a></p>
