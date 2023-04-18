@@ -20,12 +20,12 @@
         <div class="inputGroup">
             <div>
                 <label for="user_id">아이디</label>
-                <input type="text" id="user_id" name="user_id" class="form-control inputStyle" required>
+                <input type="text" id="user_id" name="user_id" class="form-control inputStyle" required placeholder="시연 아이디 : user">
                 <div></div>
             </div>
             <div>
                 <label for="user_pw">비밀번호</label>
-                <input type="password" id="user_pw" name="user_pw" class="form-control inputStyle" required>
+                <input type="password" id="user_pw" name="user_pw" class="form-control inputStyle" required placeholder="시연 비밀번호 : 1111">
                 <div></div>
             </div>
         </div>

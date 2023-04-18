@@ -1,20 +1,4 @@
 
-// document.querySelector(".swiper1").addEventListener("mouseover", function(){
-//     swiper1.autoplay.stop();
-// });
-// document.querySelector(".swiper1").addEventListener("mouseleave", function(){
-//     swiper1.autoplay.start();
-// })
-
-// document.querySelector("swiper-pagination1").addEventListener("click", function(){
-//     swiper1.autoplay.start();
-// })
-
-
-
-
-
-
 
 // 
 
@@ -152,3 +136,45 @@ function func_more(__this){
         }
     })
 }
+
+
+
+/* ------ 포트폴리오 안내 팝업 ------  */
+
+function function_modal(){
+    let modal = document.querySelector(".notice_portfolio"),
+    modalBtnClose = modal.querySelector("button"),
+    modalInput = modal.querySelector("input");
+  
+  function setCookie(name, value, day) {
+    let date = new Date();
+    date.setDate(date.getDate() + day);
+    document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+  }
+  function checkCookie(name) {
+    let cookieArr = document.cookie.split(";");
+    let reject = false;
+  
+    for (let cookie of cookieArr) {
+      if (cookie.search(name) > -1) {
+        reject = true;
+        break;
+      }
+    }
+    if (!reject) {
+      modal.classList.remove("__hidden");
+    }
+  }
+  checkCookie("portfolio_LMS");
+  
+  modalBtnClose.addEventListener("click", e=>{
+      modal.classList.add("__hidden");
+      if (modalInput.checked) {
+          setCookie("portfolio_LMS", "본 사이트는 구직용 포트폴리오 사이트입니다.", 1);
+      } else{
+          setCookie("portfolio_LMS", "본 사이트는 구직용 포트폴리오 사이트입니다.", -1);
+  
+      }
+  });
+}
+
